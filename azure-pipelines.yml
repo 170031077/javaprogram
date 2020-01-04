@@ -1,0 +1,13 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+  - task: CmdLine@2
+  inputs:
+    script: |
+      javac javaextension.java
+      java javaextension
